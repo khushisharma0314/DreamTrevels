@@ -1,0 +1,30 @@
+# Environment and credentials (NEVER commit to git)
+.env
+.env.*
+*.env
+*.env.*
+!.env.example
+!**/.env.example
+
+# Maven / Build
+target/
+**/target/
+*.class
+*.jar
+*.war
+
+# IDE & Editor
+.idea/
+**/.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+**/.vscode/
+
+# OS / Archives
+.DS_Store
+Thumbs.db
+*.zip
+*.tar.gz
+*.rar

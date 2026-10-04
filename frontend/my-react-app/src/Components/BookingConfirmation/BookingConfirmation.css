@@ -1,0 +1,480 @@
+/* =========================================================
+   BOOKING CONFIRMATION STYLING (MATCH SCREENSHOT 3 & 4)
+========================================================= */
+
+.tfg-confirm-page {
+    background: #f8fafc;
+    min-height: calc(100vh - 88px);
+    padding: 0 0 80px 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #1e293b;
+}
+
+/* =========================================================
+   CONFIRMATION HERO (MATCHING ABOUT US DESIGN)
+========================================================= */
+
+.confirm-hero {
+    position: relative;
+    width: 100%;
+    height: clamp(230px, 20vw, 270px);
+    overflow: hidden;
+    background: #0f172a;
+    display: block;
+}
+
+.confirm-hero-backdrop {
+    display: none;
+}
+
+.confirm-hero-image {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center bottom;
+}
+
+.confirm-hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background: linear-gradient(
+        90deg,
+        rgba(11, 17, 32, 0.55) 0%,
+        rgba(11, 17, 32, 0.25) 50%,
+        rgba(11, 17, 32, 0.12) 100%
+    );
+    pointer-events: none;
+}
+
+.confirm-hero-content {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    padding: 25px 8%;
+    pointer-events: none;
+}
+
+.confirm-hero-content h1 {
+    margin: 0;
+    color: #ffffff;
+    font-size: clamp(34px, 4.8vw, 54px);
+    line-height: 1.15;
+    font-weight: 800;
+    letter-spacing: -1px;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+.tfg-confirm-container {
+    max-width: 760px;
+    margin: 36px auto 0 auto;
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* =========================================================
+   SUCCESS HEADER (SCREENSHOT 3)
+========================================================= */
+
+.tfg-success-head {
+    text-align: center;
+    padding: 10px 0 10px 0;
+}
+
+.tfg-check-circle {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    box-shadow: 0 8px 24px rgba(37, 99, 235, 0.35);
+}
+
+.tfg-confirm-title {
+    font-size: 32px;
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: -0.5px;
+    margin: 0 0 10px 0;
+}
+
+.tfg-confirm-subtitle {
+    font-size: 14.5px;
+    color: #475569;
+    max-width: 580px;
+    margin: 0 auto;
+    line-height: 1.55;
+}
+
+.tfg-email-highlight {
+    color: #0f172a;
+    font-weight: 700;
+}
+
+/* =========================================================
+   DARK REFERENCE CARD (BLUE THEME)
+========================================================= */
+
+.tfg-reference-card {
+    background: linear-gradient(135deg, #0b192c 0%, #172554 100%);
+    border-radius: 12px;
+    border: 1px solid rgba(96, 165, 250, 0.25);
+    padding: 22px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.35);
+    color: #ffffff;
+}
+
+.tfg-ref-left {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.tfg-ref-label {
+    font-size: 13px;
+    color: #93c5fd;
+    font-weight: 500;
+}
+
+.tfg-ref-code {
+    font-size: 34px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #60a5fa;
+    text-shadow: 0 0 16px rgba(96, 165, 250, 0.35);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.tfg-ref-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+}
+
+.tfg-status-pill {
+    background: #dbeafe;
+    color: #1d4ed8;
+    font-size: 11px;
+    font-weight: 850;
+    letter-spacing: 0.8px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    text-transform: uppercase;
+}
+
+.tfg-ref-price {
+    font-size: 26px;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+/* =========================================================
+   COMMON CARD STYLING
+========================================================= */
+
+.tfg-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 22px 26px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+
+/* FLIGHT CARD (SCREENSHOT 3 & 4) */
+.tfg-flight-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+
+.tfg-airline-badge {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.tfg-airline-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: #eff6ff;
+    color: #2563eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.tfg-airline-badge strong {
+    font-size: 16px;
+    color: #0f172a;
+    display: block;
+}
+
+.tfg-airline-badge small {
+    font-size: 12.5px;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.tfg-route-label {
+    font-size: 13.5px;
+    color: #334155;
+    margin-bottom: 16px;
+    font-weight: 500;
+}
+
+.tfg-route-label strong {
+    color: #0f172a;
+}
+
+.tfg-flight-timings-grid {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 16px;
+    align-items: center;
+    padding: 14px 16px;
+    background: #f8fafc;
+    border-radius: 8px;
+    border: 1px solid #f1f5f9;
+}
+
+.tfg-time-text strong {
+    font-size: 16px;
+    color: #0f172a;
+    font-weight: 800;
+}
+
+.tfg-time-text {
+    font-size: 13.5px;
+    color: #475569;
+}
+
+.tfg-airport-text {
+    font-size: 12px;
+    color: #64748b;
+    margin-top: 3px;
+    font-weight: 500;
+}
+
+.tfg-duration-box {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    color: #64748b;
+    font-weight: 600;
+    padding: 0 10px;
+}
+
+.tfg-baggage-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12.5px;
+    color: #64748b;
+    margin-top: 14px;
+    font-weight: 500;
+}
+
+/* =========================================================
+   TRAVELLERS CARD (SCREENSHOT 4)
+========================================================= */
+
+.tfg-travellers-card h3 {
+    margin: 0 0 14px 0;
+    font-size: 16px;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.tfg-travellers-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tfg-travellers-list li {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1e293b;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tfg-bullet {
+    color: #0f172a;
+    font-size: 18px;
+    line-height: 1;
+}
+
+/* =========================================================
+   ACTION BUTTONS (SCREENSHOT 4)
+========================================================= */
+
+.tfg-actions-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 8px;
+    flex-wrap: wrap;
+}
+
+.tfg-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 750;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.tfg-btn-print {
+    background: #ffffff;
+    border: 1.5px solid #0f172a;
+    color: #0f172a;
+}
+
+.tfg-btn-print:hover {
+    background: #0f172a;
+    color: #ffffff;
+}
+
+.tfg-btn-help {
+    background: #2563eb;
+    border: 1.5px solid #2563eb;
+    color: #ffffff !important;
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+}
+
+.tfg-btn-help:hover {
+    background: #1d4ed8;
+    border-color: #1d4ed8;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(37, 99, 235, 0.45);
+}
+
+.tfg-back-link {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.tfg-back-link button {
+    background: transparent;
+    border: none;
+    color: #2563eb;
+    font-size: 13.5px;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* =========================================================
+   PRINT STYLES
+========================================================= */
+
+@media print {
+    body {
+        background: #ffffff !important;
+    }
+
+    .tfg-actions-row,
+    .tfg-back-link,
+    .header-wrapper,
+    footer,
+    .floating-call-container {
+        display: none !important;
+    }
+
+    .tfg-confirm-page {
+        padding: 0 !important;
+    }
+
+    .tfg-reference-card {
+        background: #f1f5f9 !important;
+        color: #000000 !important;
+        border: 1px solid #000000 !important;
+        box-shadow: none !important;
+    }
+
+    .tfg-ref-code {
+        color: #000000 !important;
+    }
+
+    .tfg-ref-price {
+        color: #000000 !important;
+    }
+}
+
+/* =========================================================
+   RESPONSIVE DESIGN (MOBILE)
+========================================================= */
+
+@media (max-width: 640px) {
+    .tfg-confirm-title {
+        font-size: 24px;
+    }
+
+    .tfg-reference-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+        padding: 18px 20px;
+    }
+
+    .tfg-ref-right {
+        align-items: flex-start;
+    }
+
+    .tfg-ref-code {
+        font-size: 26px;
+    }
+
+    .tfg-flight-timings-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .tfg-duration-box {
+        padding: 4px 0;
+    }
+
+    .tfg-actions-row {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .tfg-btn {
+        width: 100%;
+    }
+}

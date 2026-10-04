@@ -1,0 +1,623 @@
+/* =====================================================
+   FLIGHT BENEFITS SECTION
+===================================================== */
+
+.flight-benefits-section {
+    width: 100%;
+    background: #EEF6FF;
+    padding: 55px 0 65px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.flight-benefits-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 45px;
+
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   LEFT CONTENT
+===================================================== */
+
+.flight-benefits-content {
+    width: 68%;
+    position: relative;
+    z-index: 3;
+    flex-shrink: 0;
+}
+
+.flight-benefits-small-title {
+    margin: 0 0 10px;
+
+    color: #2563EB;
+
+    font-family: "Segoe UI", Inter, sans-serif;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+.flight-benefits-content h2 {
+    margin: 0 0 14px;
+
+    max-width: 700px;
+
+    color: #0B2A63;
+
+    font-family:
+        "Plus Jakarta Sans",
+        "Segoe UI",
+        Inter,
+        sans-serif;
+
+    font-size: 42px;
+    font-weight: 800;
+
+    line-height: 1.15;
+    letter-spacing: -0.7px;
+}
+
+.flight-benefits-description {
+    margin: 0 0 28px;
+
+    max-width: 700px;
+
+    color: #1F2937;
+
+    font-family:
+        "Segoe UI",
+        Inter,
+        sans-serif;
+
+    font-size: 16px;
+    font-weight: 400;
+
+    line-height: 1.55;
+}
+
+
+/* =====================================================
+   BENEFIT CARDS
+===================================================== */
+
+.flight-benefits-cards {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+
+    box-sizing: border-box;
+}
+
+.flight-benefit-card {
+    width: 100%;
+
+    min-height: 175px;
+
+    padding: 22px 18px 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: flex-start;
+
+    text-align: center;
+
+    background: #FFFFFF;
+
+    border: 1px solid #E2E8F0;
+    border-radius: 14px;
+
+    box-sizing: border-box;
+
+    box-shadow:
+        0 5px 18px rgba(31, 41, 55, 0.07);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.flight-benefit-card:hover {
+    transform: translateY(-4px);
+
+    border-color: #BFDBFE;
+
+    box-shadow:
+        0 12px 28px rgba(37, 99, 235, 0.12);
+}
+
+
+/* =====================================================
+   BENEFIT ICON
+===================================================== */
+
+.flight-benefit-icon {
+    width: 58px;
+    height: 58px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 13px;
+
+    background: #E8F2FF;
+
+    border: 1px solid #CFE2FF;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+.flight-benefit-card:hover .flight-benefit-icon {
+    background: #DBEAFE;
+
+    transform: scale(1.04);
+}
+
+.flight-benefit-icon img {
+    width: 31px;
+    height: 31px;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+
+/* =====================================================
+   BENEFIT TEXT
+===================================================== */
+
+.flight-benefit-text {
+    width: 100%;
+}
+
+.flight-benefit-text h3 {
+    margin: 0 0 7px;
+
+    color: #0B2A63;
+
+    font-family:
+        "Plus Jakarta Sans",
+        "Segoe UI",
+        Inter,
+        sans-serif;
+
+    font-size: 17px;
+    font-weight: 700;
+
+    line-height: 1.25;
+}
+
+.flight-benefit-text p {
+    margin: 0;
+
+    color: #475569;
+
+    font-family:
+        "Segoe UI",
+        Inter,
+        sans-serif;
+
+    font-size: 13px;
+    font-weight: 400;
+
+    line-height: 1.45;
+}
+
+
+/* =====================================================
+   RIGHT IMAGE AREA
+===================================================== */
+
+.flight-benefits-image-area {
+    width: 32%;
+
+    position: relative;
+
+    display: flex;
+
+    justify-content: flex-end;
+    align-items: center;
+
+    flex-shrink: 0;
+
+    align-self: stretch;
+}
+
+
+/* =====================================================
+   MAIN IMAGE
+===================================================== */
+
+.flight-benefits-main-image {
+    position: relative;
+
+    width: 100%;
+    max-width: 500px;
+
+    /*
+       Image ko zyada vertical space diya hai
+       taaki neeche khaali jagah na rahe
+    */
+    height: 330px;
+
+    overflow: hidden;
+
+    border-radius: 24px;
+
+    background: transparent;
+
+    border: none;
+
+    box-shadow:
+        0 14px 35px rgba(31, 41, 55, 0.14);
+
+    z-index: 2;
+}
+
+.flight-benefits-main-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    /*
+       Container ko poora fill karega
+    */
+    object-fit: cover;
+
+    object-position: center;
+}
+
+
+/* =====================================================
+   DECORATIONS HIDDEN
+===================================================== */
+
+.flight-benefits-dashed-circle,
+.flight-benefits-plane {
+    display: none;
+}
+
+
+/* =====================================================
+   LARGE DESKTOP
+===================================================== */
+
+@media (min-width: 1300px) {
+
+    .flight-benefits-section {
+        padding: 55px 0 65px;
+    }
+
+    .flight-benefits-container {
+        padding: 0 65px;
+
+        gap: 55px;
+    }
+
+    .flight-benefits-content {
+        width: 68%;
+    }
+
+    .flight-benefits-image-area {
+        width: 32%;
+    }
+
+    .flight-benefits-content h2 {
+        font-size: 44px;
+    }
+
+    .flight-benefit-card {
+        min-height: 180px;
+
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+
+    /* ================================================
+       LARGE IMAGE
+    ================================================ */
+
+    .flight-benefits-main-image {
+        width: 500px;
+        max-width: 500px;
+
+        height: 330px;
+
+        transform: none;
+    }
+
+    .flight-benefits-main-image img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+
+/* =====================================================
+   TABLET / SMALL DESKTOP
+===================================================== */
+
+@media (max-width: 1100px) and (min-width: 769px) {
+
+    .flight-benefits-section {
+        padding: 50px 0 55px;
+    }
+
+    .flight-benefits-container {
+        padding: 0 30px;
+
+        gap: 30px;
+    }
+
+    .flight-benefits-content {
+        width: 62%;
+    }
+
+    .flight-benefits-image-area {
+        width: 38%;
+
+        min-height: 0;
+    }
+
+    .flight-benefits-content h2 {
+        font-size: 32px;
+    }
+
+    .flight-benefits-description {
+        font-size: 14px;
+    }
+
+
+    /* ================================================
+       TABLET CARDS
+    ================================================ */
+
+    .flight-benefits-cards {
+        gap: 12px;
+    }
+
+    .flight-benefit-card {
+        min-height: 170px;
+
+        padding: 18px 12px;
+    }
+
+    .flight-benefit-icon {
+        width: 50px;
+        height: 50px;
+
+        margin-bottom: 10px;
+    }
+
+    .flight-benefit-icon img {
+        width: 27px;
+        height: 27px;
+    }
+
+    .flight-benefit-text h3 {
+        font-size: 15px;
+    }
+
+    .flight-benefit-text p {
+        font-size: 12px;
+    }
+
+
+    /* ================================================
+       TABLET IMAGE
+    ================================================ */
+
+    .flight-benefits-main-image {
+        width: 100%;
+        max-width: 340px;
+
+        height: 260px;
+    }
+
+    .flight-benefits-main-image img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .flight-benefits-section {
+        padding: 42px 16px 50px;
+    }
+
+    .flight-benefits-container {
+        width: 100%;
+
+        padding: 0;
+
+        flex-direction: column;
+
+        gap: 0;
+    }
+
+    .flight-benefits-content {
+        width: 100%;
+    }
+
+
+    /* ================================================
+       MOBILE TITLE
+    ================================================ */
+
+    .flight-benefits-small-title {
+        font-size: 12px;
+
+        margin-bottom: 9px;
+    }
+
+    .flight-benefits-content h2 {
+        font-size: 28px;
+
+        line-height: 1.2;
+
+        margin-bottom: 12px;
+
+        letter-spacing: -0.3px;
+    }
+
+    .flight-benefits-description {
+        font-size: 14px;
+
+        line-height: 1.55;
+
+        margin-bottom: 24px;
+    }
+
+
+    /* ================================================
+       MOBILE CARDS
+    ================================================ */
+
+    .flight-benefits-cards {
+        grid-template-columns: 1fr;
+
+        gap: 13px;
+    }
+
+    .flight-benefit-card {
+        min-height: auto;
+
+        padding: 18px;
+
+        flex-direction: row;
+
+        align-items: center;
+
+        text-align: left;
+
+        border-radius: 13px;
+    }
+
+    .flight-benefit-icon {
+        width: 52px;
+        height: 52px;
+
+        margin: 0 15px 0 0;
+    }
+
+    .flight-benefit-icon img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .flight-benefit-text {
+        flex: 1;
+    }
+
+    .flight-benefit-text h3 {
+        font-size: 16px;
+
+        margin-bottom: 5px;
+    }
+
+    .flight-benefit-text p {
+        font-size: 13px;
+
+        line-height: 1.45;
+    }
+
+
+    /* ================================================
+       HIDE RIGHT IMAGE ON MOBILE
+    ================================================ */
+
+    .flight-benefits-image-area {
+        display: none !important;
+    }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+
+    .flight-benefits-section {
+        padding: 35px 14px 42px;
+    }
+
+    .flight-benefits-content h2 {
+        font-size: 25px;
+    }
+
+    .flight-benefits-description {
+        font-size: 13.5px;
+
+        margin-bottom: 20px;
+    }
+
+    .flight-benefit-card {
+        padding: 16px;
+    }
+
+    .flight-benefit-icon {
+        width: 48px;
+        height: 48px;
+
+        margin-right: 13px;
+    }
+
+    .flight-benefit-icon img {
+        width: 26px;
+        height: 26px;
+    }
+
+    .flight-benefit-text h3 {
+        font-size: 15px;
+    }
+
+    .flight-benefit-text p {
+        font-size: 12.5px;
+    }
+}

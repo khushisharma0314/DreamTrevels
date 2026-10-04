@@ -1,0 +1,991 @@
+/* =========================================================
+   FARE TIER SELECTION MODAL
+   SCREENSHOT BLUE + NAVY COLOR THEME
+========================================================= */
+
+.fare-tier-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 100vw;
+
+    background: rgba(10, 25, 60, 0.72);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    z-index: 9999999;
+
+    padding: 70px 16px 40px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    box-sizing: border-box;
+    -webkit-overflow-scrolling: touch;
+
+    animation: fadeInModal 0.25s ease-out;
+}
+
+@keyframes fadeInModal {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* =========================================================
+   MODAL CONTAINER
+========================================================= */
+
+.fare-tier-modal-container {
+    background: #ffffff;
+
+    border-radius: 20px;
+
+    max-width: 1080px;
+    width: 100%;
+
+    max-height: calc(100vh - 100px);
+
+    margin: 0 auto;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    box-shadow:
+        0 25px 60px -12px rgba(8, 24, 58, 0.45);
+
+    display: flex;
+    flex-direction: column;
+
+    animation: slideUpModal 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+
+    border: 1px solid #dbe7f5;
+
+    box-sizing: border-box;
+}
+
+@keyframes slideUpModal {
+    from {
+        transform: translateY(24px) scale(0.98);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+
+
+/* =========================================================
+   MODAL HEADER
+========================================================= */
+
+.fare-tier-modal-header {
+    padding: 22px 28px 0;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    background: #14295f;
+
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 10;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HEADER INFO
+========================================================= */
+
+.fare-tier-header-info {
+    display: flex;
+    flex-direction: column;
+
+    gap: 0;
+
+    flex: 1;
+}
+
+
+.fare-tier-header-info h2 {
+    font-size: 1.7rem;
+
+    font-weight: 800;
+
+    color: #ffffff;
+
+    margin: 0;
+
+    letter-spacing: -0.4px;
+
+    line-height: 1.25;
+}
+
+
+/* =========================================================
+   ROUTE LINE
+========================================================= */
+
+.fare-tier-route-line {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 0.95rem;
+
+    color: #14295f;
+
+    font-weight: 700;
+
+    background: #dcecff;
+
+    margin: 18px -28px 0;
+
+    padding: 12px 28px;
+
+    min-height: 42px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   ROUTE DASH
+========================================================= */
+
+.fare-route-dash {
+    flex: 1;
+
+    max-width: 160px;
+
+    height: 1px;
+
+    border-top: 1.5px dashed #8ca9cf;
+}
+
+
+/* =========================================================
+   PLANE ICON
+========================================================= */
+
+.fare-route-plane {
+    color: #0878d8;
+
+    font-size: 14px;
+
+    transform: rotate(90deg);
+}
+
+
+/* =========================================================
+   CLOSE BUTTON
+========================================================= */
+
+.fare-tier-close-btn {
+    background: rgba(255, 255, 255, 0.16);
+
+    border: none;
+
+    width: 34px;
+    height: 34px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    font-size: 1rem;
+
+    color: #ffffff;
+
+    transition: all 0.2s ease;
+
+    flex-shrink: 0;
+
+    margin-left: 15px;
+}
+
+
+.fare-tier-close-btn:hover {
+    background: rgba(255, 255, 255, 0.28);
+
+    color: #ffffff;
+
+    transform: rotate(90deg);
+}
+
+
+/* =========================================================
+   3-TIER GRID
+========================================================= */
+
+.fare-tier-grid {
+    padding: 34px 28px 24px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+
+    background: #ffffff;
+
+    align-items: stretch;
+}
+
+
+/* =========================================================
+   COMMON CARD
+========================================================= */
+
+.fare-tier-card {
+    position: relative;
+
+    background: #ffffff;
+
+    border: 1.5px solid #dbe3ef;
+
+    border-radius: 14px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    transition: all 0.25s ease;
+
+    box-shadow:
+        0 4px 14px rgba(20, 41, 95, 0.08);
+
+    overflow: visible;
+}
+
+
+.fare-tier-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 26px rgba(20, 41, 95, 0.14);
+}
+
+
+/* =========================================================
+   CARD BORDERS
+========================================================= */
+
+.card-basic {
+    border-color: #d9e1ed;
+}
+
+
+.card-classic {
+    border-color: #0878d8;
+
+    border-width: 2px;
+
+    box-shadow:
+        0 8px 24px rgba(8, 120, 216, 0.16);
+}
+
+
+.card-flex {
+    border-color: #14295f;
+
+    border-width: 2px;
+
+    box-shadow:
+        0 8px 24px rgba(20, 41, 95, 0.14);
+}
+
+
+/* =========================================================
+   TOP BADGES
+========================================================= */
+
+.fare-tier-top-badge {
+    position: absolute;
+
+    top: -12px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    font-size: 0.65rem;
+
+    font-weight: 800;
+
+    padding: 4px 14px;
+
+    border-radius: 20px;
+
+    letter-spacing: 0.5px;
+
+    white-space: nowrap;
+
+    text-transform: uppercase;
+
+    color: #ffffff;
+
+    z-index: 5;
+}
+
+
+/* =========================================================
+   CLASSIC BADGE
+========================================================= */
+
+.badge-classic {
+    background: #0878d8;
+
+    box-shadow:
+        0 3px 9px rgba(8, 120, 216, 0.4);
+}
+
+
+/* =========================================================
+   FLEX BADGE
+========================================================= */
+
+.badge-flex {
+    background: #7d9ac4;
+
+    box-shadow:
+        0 3px 9px rgba(125, 154, 196, 0.4);
+}
+
+
+/* =========================================================
+   CARD HEADER BOXES
+========================================================= */
+
+.fare-tier-card-header {
+    padding: 18px 16px 15px;
+
+    text-align: center;
+
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   BASIC HEADER
+========================================================= */
+
+.header-basic {
+    background: #14295f;
+}
+
+
+/* =========================================================
+   CLASSIC HEADER
+========================================================= */
+
+.header-classic {
+    background: #14295f;
+}
+
+
+/* =========================================================
+   FLEX HEADER
+========================================================= */
+
+.header-flex {
+    background: #14295f;
+}
+
+
+/* =========================================================
+   FARE TIER NAME
+========================================================= */
+
+.fare-tier-name {
+    font-size: 1.15rem;
+
+    font-weight: 800;
+
+    margin: 0 0 4px;
+
+    color: #ffffff;
+
+    text-transform: capitalize;
+}
+
+
+/* =========================================================
+   FARE TIER SUBTITLE
+========================================================= */
+
+.fare-tier-sub {
+    font-size: 0.76rem;
+
+    color: #dcecff;
+
+    margin: 0;
+
+    font-weight: 400;
+
+    opacity: 1;
+
+    line-height: 1.3;
+}
+
+
+/* =========================================================
+   PRICE SECTION
+========================================================= */
+
+.fare-tier-price-section {
+    padding: 16px 16px 12px;
+
+    text-align: center;
+
+    border-bottom: 1px solid #edf2f8;
+
+    background: #ffffff;
+}
+
+
+/* =========================================================
+   PRICE BOX
+========================================================= */
+
+.fare-tier-price-box {
+    display: flex;
+
+    align-items: baseline;
+
+    justify-content: center;
+
+    gap: 2px;
+}
+
+
+/* =========================================================
+   CURRENCY
+========================================================= */
+
+.fare-currency {
+    font-size: 1.25rem;
+
+    font-weight: 800;
+
+    color: #111827;
+}
+
+
+.currency-classic {
+    color: #0878d8;
+}
+
+
+/* =========================================================
+   PRICE AMOUNT
+========================================================= */
+
+.fare-amount {
+    font-size: 1.85rem;
+
+    font-weight: 900;
+
+    color: #111827;
+
+    letter-spacing: -0.5px;
+}
+
+
+.amount-classic {
+    color: #0878d8;
+}
+
+
+/* =========================================================
+   PER PERSON
+========================================================= */
+
+.fare-per-person {
+    font-size: 0.8rem;
+
+    color: #64748b;
+
+    margin-left: 4px;
+
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   PERKS LIST
+========================================================= */
+
+.fare-tier-perks-list {
+    list-style: none;
+
+    padding: 16px 18px 20px;
+
+    margin: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 11px;
+
+    flex: 1;
+}
+
+
+/* =========================================================
+   PERK ITEM
+========================================================= */
+
+.perk-item {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    font-size: 0.82rem;
+
+    line-height: 1.35;
+}
+
+
+/* =========================================================
+   PERK SYMBOL
+========================================================= */
+
+.perk-symbol {
+    font-size: 0.95rem;
+
+    font-weight: 900;
+
+    line-height: 1;
+
+    flex-shrink: 0;
+
+    margin-top: 1px;
+}
+
+
+/* =========================================================
+   CHECK SYMBOL
+   SCREENSHOT BLUE
+========================================================= */
+
+.symbol-check {
+    color: #0878d8;
+}
+
+
+/* =========================================================
+   CROSS SYMBOL
+   SCREENSHOT RED
+========================================================= */
+
+.symbol-cross {
+    color: #d84b5b;
+}
+
+
+/* =========================================================
+   INCLUDED TEXT
+========================================================= */
+
+.perk-included .perk-label {
+    color: #172033;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   EXCLUDED TEXT
+========================================================= */
+
+.perk-excluded .perk-label {
+    color: #475569;
+
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   SELECT BUTTON AREA
+========================================================= */
+
+.fare-tier-card-footer {
+    padding: 0 18px 18px;
+
+    margin-top: auto;
+}
+
+
+/* =========================================================
+   COMMON SELECT BUTTON
+========================================================= */
+
+.fare-tier-select-btn {
+    width: 100%;
+
+    padding: 11px 16px;
+
+    border-radius: 8px;
+
+    font-size: 0.9rem;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+
+    box-shadow:
+        0 2px 6px rgba(20, 41, 95, 0.12);
+}
+
+
+/* =========================================================
+   BASIC BUTTON
+   WHITE + DARK BORDER
+========================================================= */
+
+.btn-basic {
+    background: #ffffff;
+
+    color: #111827;
+
+    border: 2px solid #111827;
+}
+
+
+.btn-basic:hover {
+    background: #f1f5f9;
+
+    color: #14295f;
+
+    border-color: #14295f;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 4px 10px rgba(20, 41, 95, 0.15);
+}
+
+
+/* =========================================================
+   CLASSIC BUTTON
+   BRIGHT BLUE
+========================================================= */
+
+.btn-classic {
+    background: #0878d8;
+
+    color: #ffffff;
+
+    border: 2px solid #0878d8;
+}
+
+
+.btn-classic:hover {
+    background: #0668bd;
+
+    border-color: #0668bd;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 5px 14px rgba(8, 120, 216, 0.35);
+}
+
+
+/* =========================================================
+   FLEX BUTTON
+   DARK NAVY
+========================================================= */
+
+.btn-flex {
+    background: #14295f;
+
+    color: #ffffff;
+
+    border: 2px solid #14295f;
+}
+
+
+.btn-flex:hover {
+    background: #0d1e49;
+
+    border-color: #0d1e49;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 5px 14px rgba(20, 41, 95, 0.35);
+}
+
+
+/* =========================================================
+   MODAL FOOTER
+========================================================= */
+
+.fare-tier-modal-footer {
+    padding: 12px 28px;
+
+    border-top: 1px solid #dcecff;
+
+    background: #eef6ff;
+
+    text-align: center;
+
+    border-bottom-left-radius: 20px;
+
+    border-bottom-right-radius: 20px;
+}
+
+
+.fare-tier-modal-footer span {
+    font-size: 0.76rem;
+
+    color: #47617f;
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 840px) {
+
+    .fare-tier-grid {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+
+        padding: 24px 16px;
+    }
+
+
+    .fare-tier-modal-header {
+        padding: 18px 20px 0;
+    }
+
+
+    .fare-tier-modal-header h2 {
+        font-size: 1.2rem;
+    }
+
+
+    .fare-tier-route-line {
+        flex-wrap: wrap;
+
+        margin-left: -20px;
+        margin-right: -20px;
+
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+
+    .fare-route-dash {
+        display: none;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .fare-tier-modal-overlay {
+        padding: 45px 8px 25px;
+
+        align-items: flex-start;
+    }
+
+
+    .fare-tier-modal-container {
+        width: 100%;
+
+        max-width: 100%;
+
+        border-radius: 14px;
+
+        max-height: none;
+
+        margin: 0;
+    }
+
+
+    .fare-tier-modal-header {
+        padding: 14px 14px 0;
+
+        border-top-left-radius: 14px;
+
+        border-top-right-radius: 14px;
+    }
+
+
+    .fare-tier-modal-header h2 {
+        font-size: 1.05rem;
+
+        line-height: 1.3;
+    }
+
+
+    .fare-tier-route-line {
+        font-size: 0.78rem;
+
+        gap: 6px;
+
+        margin-left: -14px;
+
+        margin-right: -14px;
+
+        padding: 10px 14px;
+    }
+
+
+    .fare-tier-grid {
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+
+        padding: 20px 10px;
+    }
+
+
+    .fare-tier-card {
+        width: 100%;
+
+        max-width: 100%;
+
+        box-sizing: border-box;
+    }
+
+
+    .fare-tier-modal-footer {
+        padding: 10px 12px;
+
+        border-bottom-left-radius: 14px;
+
+        border-bottom-right-radius: 14px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .fare-tier-modal-overlay {
+        padding: 30px 6px 20px;
+    }
+
+
+    .fare-tier-modal-header {
+        padding: 13px 12px 0;
+    }
+
+
+    .fare-tier-header-info h2 {
+        font-size: 0.98rem;
+    }
+
+
+    .fare-tier-route-line {
+        font-size: 0.72rem;
+
+        margin-left: -12px;
+
+        margin-right: -12px;
+
+        padding-left: 12px;
+
+        padding-right: 12px;
+    }
+
+
+    .fare-tier-close-btn {
+        width: 30px;
+
+        height: 30px;
+
+        font-size: 0.85rem;
+    }
+
+
+    .fare-tier-grid {
+        padding: 18px 8px;
+    }
+
+
+    .fare-tier-name {
+        font-size: 1.05rem;
+    }
+
+
+    .fare-tier-sub {
+        font-size: 0.7rem;
+    }
+
+
+    .fare-amount {
+        font-size: 1.65rem;
+    }
+
+
+    .fare-tier-perks-list {
+        padding-left: 14px;
+
+        padding-right: 14px;
+    }
+
+
+    .perk-item {
+        font-size: 0.78rem;
+    }
+
+
+    .fare-tier-card-footer {
+        padding-left: 14px;
+
+        padding-right: 14px;
+
+        padding-bottom: 14px;
+    }
+}
