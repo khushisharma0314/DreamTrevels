@@ -452,7 +452,7 @@ function FlightForm() {
 
     // 2. Query Duffel live backend (enhances with live worldwide airports)
     try {
-      const apiBase = import.meta.env.VITE_API_BASE_URL || "http://localhost:8080";
+      const apiBase = import.meta.env.VITE_API_BASE_URL || "https://dreamflights-backend-latest.onrender.com";
       const response = await fetch(
         `${apiBase}/api/cities/search?keyword=${encodeURIComponent(
           trimmedQuery

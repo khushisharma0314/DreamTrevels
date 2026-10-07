@@ -21,7 +21,7 @@ function PromoCodeBox({
         const fetchOffers = async () => {
             try {
                 setIsLoadingOffers(true);
-                const baseUrl = import.meta.env.VITE_API_BASE_URL || "http://localhost:8080";
+                const baseUrl = import.meta.env.VITE_API_BASE_URL || "https://dreamflights-backend-latest.onrender.com";
                 const response = await fetch(`${baseUrl}/api/promos/available`);
                 if (response.ok) {
                     const data = await response.json();
@@ -62,7 +62,7 @@ function PromoCodeBox({
             setErrorMsg("");
             setSuccessMsg("");
 
-            const baseUrl = import.meta.env.VITE_API_BASE_URL || "http://localhost:8080";
+            const baseUrl = import.meta.env.VITE_API_BASE_URL || "https://dreamflights-backend-latest.onrender.com";
             const response = await fetch(`${baseUrl}/api/promos/validate`, {
                 method: "POST",
                 headers: {

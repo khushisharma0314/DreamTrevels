@@ -6,19 +6,9 @@ function FareTierModal({ flight, tripType, isReturn, onClose, onSelectTier }) {
 
     const basePrice = Number(flight.price || 0);
 
-    // Calculate realistic incremental pricing for Classic & Flex tiers
-    let classicPrice;
-    let flexPrice;
-
-    if (basePrice >= 1000) {
-        // INR Scale (e.g. ₹4,500 -> +₹1,150 for Classic, +₹2,400 for Flex)
-        classicPrice = Math.round((basePrice + 1150) / 50) * 50;
-        flexPrice = Math.round((basePrice + 2400) / 50) * 50;
-    } else {
-        // Currency / Duffel Scale (e.g. 78.76 -> 92.94 -> 108.69)
-        classicPrice = Math.round((basePrice * 1.18) * 100) / 100;
-        flexPrice = Math.round((basePrice * 1.38) * 100) / 100;
-    }
+    // Calculate realistic incremental pricing for Classic & Flex tiers (18% for Classic, 38% for Flex)
+    const classicPrice = Math.round((basePrice * 1.18) * 100) / 100;
+    const flexPrice = Math.round((basePrice * 1.38) * 100) / 100;
 
     const cabin = String(flight.flightClass || "economy").toLowerCase();
     const isBusiness = cabin.includes("bus") || cabin.includes("first");

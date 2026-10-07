@@ -298,8 +298,11 @@ function BookingReview() {
     const formatPrice = (price) => {
         const numericPrice = Number(price || 0);
         return Number.isFinite(numericPrice)
-            ? numericPrice.toLocaleString("en-IN")
-            : "0";
+            ? numericPrice.toLocaleString("en-US", {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2,
+            })
+            : "0.00";
     };
 
     // Calculate live seat charges from currentSelectedSeats

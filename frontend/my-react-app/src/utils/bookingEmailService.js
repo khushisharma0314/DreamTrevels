@@ -5,7 +5,7 @@
  * Booking details are sent to the Spring Boot backend, which emails the company.
  */
 const BACKEND_URL =
-    `${import.meta.env.VITE_API_BASE_URL || "http://localhost:8080"}/api/booking-requests`;
+    `${import.meta.env.VITE_API_BASE_URL || "https://dreamflights-backend-latest.onrender.com"}/api/booking-requests`;
 
 const COMPANY_EMAIL = "rajusharma67301@gmail.com";
 

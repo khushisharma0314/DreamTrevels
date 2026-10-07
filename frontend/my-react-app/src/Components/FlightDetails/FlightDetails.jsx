@@ -166,11 +166,8 @@ function FlightDetails() {
        USD PRICE CALCULATIONS
     ========================================================= */
     const toUSD = (val) => {
-        let num = Number(val || 0);
-        if (num > 500) {
-            num = Math.round((num / 83.5) * 100) / 100;
-        }
-        return num;
+        const num = Number(val || 0);
+        return Number.isFinite(num) ? num : 0;
     };
 
     const depPriceUSD = selectedDeparture ? toUSD(selectedDeparture.price) : 360;

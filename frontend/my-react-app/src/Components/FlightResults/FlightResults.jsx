@@ -116,7 +116,7 @@ function FlightResults() {
 
                 console.log("Duffel Search Request:", duffelRequest);
 
-                const apiBase = import.meta.env.VITE_API_BASE_URL || "http://localhost:8080";
+                const apiBase = import.meta.env.VITE_API_BASE_URL || "https://dreamflights-backend-latest.onrender.com";
                 const response = await fetch(`${apiBase}/api/duffel/search`, {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
@@ -741,7 +741,7 @@ function FlightResults() {
         else if (cabinLower.includes("bus")) formattedCabin = "business";
         else if (cabinLower.includes("first")) formattedCabin = "first";
 
-        const apiBase = import.meta.env.VITE_API_BASE_URL || "http://localhost:8080";
+        const apiBase = import.meta.env.VITE_API_BASE_URL || "https://dreamflights-backend-latest.onrender.com";
         const params = new URLSearchParams({
             from: fromCode,
             to: toCode,
